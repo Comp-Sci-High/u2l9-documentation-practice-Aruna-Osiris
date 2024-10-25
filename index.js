@@ -31,9 +31,12 @@ fetchAstronauts()
 // 4. Make a fetch request and format your resulting JSON. 
 // 5. Log the data to the console to inspect its structure.
 // 6. Modify the console log to only show the URL of today's astronomy picture. 
-
-async function fetchPictures(requestURL) {
-        
+let requestURL2 ="https://api.nasa.gov/planetary/apod?api_key=OWE8PJAKGfCSXPrrIHfsiMuB9lgz61B7MBv80F6i"
+async function fetchPictures() {
+    const responses = await fetch(requestURL2)
+    const data2 = await responses.json()
+    console.log(data2.url)
 }
 
 // CALL your function here
+fetchPictures()
